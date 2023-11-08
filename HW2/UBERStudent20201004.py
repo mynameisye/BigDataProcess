@@ -2,9 +2,7 @@ import sys
 import calendar
 
 
-dayofweek = ['MON', "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
-# day = calendar.weekday(2023,11,22)
-# print(dayofweek[day])
+dayofweek = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 
 f = open(sys.argv[1])
 f2 = open(sys.argv[2], "wt")
