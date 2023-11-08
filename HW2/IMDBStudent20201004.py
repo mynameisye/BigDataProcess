@@ -1,11 +1,12 @@
-f = open("movies_exp.txt")
+import sys
+
+f = open(sys.argv[1])
 
 genre_dict = dict()
 
 for line in f:
     line = line.strip()
     movie = line.split("::")
-    print(movie[2])
 
     genre = movie[2].split("|")
     for g in genre:
@@ -15,4 +16,9 @@ for line in f:
         else:
             genre_dict[g_id] = 1
 
-print(genre_dict)
+f = open(sys.argv[2], "wt")
+
+for g, cnt in genre_dict.items():
+    f.write("%s %d\n" % (g, cnt))
+
+f.close()
