@@ -18,3 +18,6 @@ for line in f:
 
 for s in sen:
    f2.write(s)
+
+f.close()
+f2.close()
