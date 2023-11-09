@@ -15,8 +15,6 @@ for line in f:
     date = uber[1].split("/")
     day = calendar.weekday(int(date[2]), int(date[0]), int(date[1]))
     sen.append("%s,%s %s,%s\n" % (uber[0],dayofweek[day],uber[2],uber[3]))
-    
-sen.sort()
 
 for s in sen:
    f2.write(s)
