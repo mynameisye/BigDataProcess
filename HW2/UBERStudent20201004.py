@@ -8,6 +8,7 @@ f = open(sys.argv[1])
 f2 = open(sys.argv[2], "wt")
 sen_dict = dict()
 
+
 for line in f:
     line = line.strip()
     uber = line.split(",")
@@ -18,10 +19,11 @@ for line in f:
     sId = uber[0] + "," + dayofweek[day]
     if sId in sen_dict:
         val = sen_dict[sId].split(",")
-        va11 = int(uber[2]) + int(val[0])
+        val1 = int(uber[2]) + int(val[0])
         val2 = int(uber[3]) + int(val[1])
+        sen_dict[sId] = str(val1) + "," + str(val2)
     else:
-        sen_dict[sId] =  uber[2] + "," + uber[3]
+        sen_dict[sId] = uber[2] + "," + uber[3]
 
 
 for s in sen_dict.keys():
