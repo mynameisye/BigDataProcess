@@ -17,7 +17,7 @@ for line in f:
     sen.append("%s,%s %s,%s\n" % (uber[0],dayofweek[day],uber[2],uber[3]))
 
 for s in sen:
-   f2.write(s)
+    f2.write(s)
 
 f.close()
 f2.close()
